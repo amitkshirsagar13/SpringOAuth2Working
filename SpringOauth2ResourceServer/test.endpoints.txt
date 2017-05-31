@@ -1,0 +1,11 @@
+Get Token:
+curl curl:password@localhost:9091/oauth/token?grant_type=client_credentials
+
+Access Resource:
+curl -H "Authorization: Bearer $token" localhost:9090/
+curl -H "Authorization: Bearer $token" localhost:9090/user
+curl -H "Authorization: Bearer $token" localhost:9090/persons
+curl -H "Authorization: Bearer $token" -X POST -H "Content-Type: application/json" -d "{\"firstName\": \"John\"}" localhost:9090/persons
+curl -H "Authorization: Bearer $token" localhost:9090/persons/search/findByFirstNameLike\?firstName=J%25
+curl -H "Authorization: Bearer $token" -X PUT localhost:9090/persons/1 -d "{\"firstName\": \"Jane\"}" -H "Content-Type: application/json"
+curl -H "Authorization: Bearer $token" -X DELETE localhost:9090/persons/1
