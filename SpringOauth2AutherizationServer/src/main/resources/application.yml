@@ -1,0 +1,10 @@
+server:
+  contextPath: /auth
+  port: 9091
+
+spring:
+  datasource:
+    url: jdbc:sqlite:C:/opt/tokens.db
+
+keystore:
+  password: secretit

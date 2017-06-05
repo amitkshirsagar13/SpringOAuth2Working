@@ -1,0 +1,13 @@
+server:
+  port: 9090
+
+oauth_db: jdbc:sqlite:C:/opt/tokens.db
+
+keystore:
+  password: secretit
+
+security:
+ oauth2:
+   resource:
+     jwt:
+       keyUri: http://localhost:9091/auth/oauth/token_key

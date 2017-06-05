@@ -1,5 +1,5 @@
 Get Token:
-curl curl:password@localhost:9091/oauth/token?grant_type=client_credentials
+curl curl:password@localhost:9091/auth/oauth/token?grant_type=client_credentials
 
 Access Resource:
 curl -H "Authorization: Bearer $token" localhost:9090/
