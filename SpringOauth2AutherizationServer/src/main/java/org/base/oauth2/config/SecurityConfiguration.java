@@ -37,6 +37,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
-		http.authorizeRequests().antMatchers("/**").authenticated().and().httpBasic().realmName("OAuth Server");
+		http.csrf().disable().authorizeRequests().antMatchers("/**").authenticated().and().httpBasic()
+				.realmName("OAuth Server");
 	}
 }
